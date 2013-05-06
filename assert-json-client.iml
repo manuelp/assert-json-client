@@ -11,7 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: assert-json:assert-json:0.1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: assert-json:assert-json:0.1.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.clojure:clojure:1.5.1" level="project" />
     <orderEntry type="library" name="Maven: cheshire:cheshire:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.1.4" level="project" />

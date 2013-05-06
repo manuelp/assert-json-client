@@ -1,12 +1,14 @@
 package assert_json_client;
 
-import assert_json.java.AssertJson;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
 import static assert_json.java.AssertJson.assertJson;
+import static assert_json.java.AssertJson.createJson;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class SmokeTest {
   @Test
@@ -26,4 +28,18 @@ public class SmokeTest {
     });
   }
 
+  @Test
+  public void shouldCreateJsonFromSourceMap() {
+    assertThat(createJson(new HashMap<String, Object>() {
+      {
+        put("a", 1);
+        put("b", Arrays.asList(1, "ciao"));
+        put("c", new HashMap<String, Object>() {
+          {
+            put("sub", 3);
+          }
+        });
+      }
+    }), is("{\"b\":[1,\"ciao\"],\"c\":{\"sub\":3},\"a\":1}"));
+  }
 }
